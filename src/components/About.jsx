@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-scroll'
 import CountUp from 'react-countup'
 import {useInView} from 'react-intersection-observer'
 import {motion} from 'framer-motion'
@@ -40,8 +40,9 @@ const About = () => {
 
             </div>
             <div className='flex justify-start items-center gap-x-6'>
-              <button className='btn btn-lg'>Связаться</button>
-              <a href="#" className='text-gradient btn-link'>Портфолио</a>
+            <a href="https://t.me/gudkovsky" className='btn btn-sm px-6 py-4 flex hover:scale-110 items-center justify-center text-[20px] transition duration-1000' target='_blank' rel='noreferrer'>Связаться</a>
+
+              <Link to='work' className='cursor-pointer text-gradient btn-link' activeClass='active' smooth={true} spy={true}>Портфолио</Link>
             </div>
           </div>
         </motion.div>

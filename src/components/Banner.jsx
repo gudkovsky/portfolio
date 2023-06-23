@@ -1,8 +1,8 @@
 import React from "react";
-import image from "../assets/avatar.svg";
+import image from "../assets/hero.png";
 import { Link } from "react-scroll";
 
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
+import { FaGithub, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants.js";
@@ -50,23 +50,23 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
             >
-              <Link className="text-gradient text-[20px] btn-link  items-center self-start" to='work' smooth={true}>Моё портфолио</Link>
+              <Link className="cursor-pointer text-gradient text-[20px] btn-link items-center self-start" to='work' smooth={true}>Моё портфолио</Link>
             </motion.div>
             <motion.div 
               variants={fadeIn('up', 0.7)}
               initial='hidden'
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
+              className="flex text-[40px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#" target="_blank" rel="noreferrer">
+              <a href="https://github.com/gudkovsky" target="_blank" rel="noreferrer">
                 <FaGithub/>
               </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaGithub/>
+              <a href="https://t.me/gudkovsky" target="_blank" rel="noreferrer">
+                <FaTelegram/>
               </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaGithub/>
+              <a href="https://wa.me/79778587980" target="_blank" rel="noreferrer">
+                <FaWhatsapp/>
               </a>
             </motion.div>
           </div>

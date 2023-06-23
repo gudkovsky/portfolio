@@ -2,6 +2,7 @@ import React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs'
 import {motion } from 'framer-motion'
 import {fadeIn} from '../variants.js'
+import { Link } from 'react-scroll'
 
 const skills = [
   {
@@ -33,10 +34,10 @@ const Services = () => {
           className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
         >
           <h2 className='h2 text-accent mb-6'>Навыки</h2>
-          <button className='btn btn-sm'>Посмотреть работы</button>
+          <Link to='work' className='cursor-pointer py-3 btn btn-sm' activeClass='active' smooth={true} spy={true}>Посмотреть работы</Link>
         </motion.div>
         <motion.div 
-          variants={fadeIn('left', 0.3)}
+          variants={fadeIn('left', 0.5)}
           initial='hidden'
           whileInView={'show'}
           viewport={{once: false, amount: 0.3}}

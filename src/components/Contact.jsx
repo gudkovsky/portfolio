@@ -14,8 +14,7 @@ const Contact = () => {
       >
         <div className='flex-1 flex justify-start items-center'>
           <div>
-            <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>Связаться со мной</h4>
-            <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>Давайте работать<br />вместе!</h2>
+            <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>Давайте работать<br /><span className='text-accent'>вместе!</span></h2>
           </div>
         </div>
 
@@ -24,11 +23,13 @@ const Contact = () => {
           initial='hidden'
           whileInView={'show'}
           viewport={{once: false, amount: 0.3}}
-          className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'
+          className='flex-1 border rounded-2xl flex flex-col gap-y-6  p-6 items-start'
+          action='https://formspree.io/f/xeqbjqej'
+          method='POST'
         >
-          <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Ваше имя'/>
-          <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Ваша почта'/>
-          <textarea className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='Ваше сообщение'></textarea>
+          <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Ваше имя' name='name' required/>
+          <input className='bg-transparent border-b px-3 py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Ваша почта' name='email' required/>
+          <textarea className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='Ваше сообщение' name='comment'></textarea>
           <button className='btn btn-lg self-end'>Отправить</button>
         </motion.form>
       </motion.div>
