@@ -23,14 +23,42 @@ const Banner = () => {
               >
                 ИЛЬЯ <span>ГУДКОВ</span>
               </motion.h1>
-              <span className="text-white">Я </span>
-              <TypeAnimation className="text-accent" sequence={['разработчик', 2000, 'junior', 2000, 'фронтендер', 2000, 'ищу работу 😅', 2000, ]} speed={50} wrapper='span' repeat={Infinity}/>
+              <motion.div
+                variants={fadeIn('up', 0.4)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{once: false, amount: 0.7}}
+              >
+                <span className="text-white">Я </span>
+                <TypeAnimation className="text-accent" sequence={['разработчик', 2000, 'junior', 2000, 'фронтендер', 2000, 'ищу работу 😅', 2000, ]} speed={50} wrapper='span' repeat={Infinity}/>
+              </motion.div>
+
             </div>
-            <p className="mb-5"> Я начинающий разработчик, и я бы хотел стать частью коллектива.<br/>Я уверен, что могу внести свой вклад и стать достойным членом команды.<br/>Я верю, что работая вместе, мы можем превзойти все ожидания!🤟 </p>
-            <div className="mb-10">
+            <motion.p
+              variants={fadeIn('up', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.7}}
+              className="mb-5"
+             > 
+              Я начинающий разработчик, и я бы хотел стать частью коллектива. Я уверен, что могу внести свой вклад и стать достойным членом команды. Я верю, что работая вместе, мы можем превзойти все ожидания!🤟 
+            </motion.p>
+            <motion.div 
+              className="mb-10"
+              variants={fadeIn('up', 0.6)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.7}}
+            >
               <Link className="text-gradient text-[20px] btn-link  items-center self-start" to='work' smooth={true}>Моё портфолио</Link>
-            </div>
-            <div className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
+            </motion.div>
+            <motion.div 
+              variants={fadeIn('up', 0.7)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.7}}
+              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
+            >
               <a href="#" target="_blank" rel="noreferrer">
                 <FaGithub/>
               </a>
@@ -40,11 +68,17 @@ const Banner = () => {
               <a href="#" target="_blank" rel="noreferrer">
                 <FaGithub/>
               </a>
-            </div>
+            </motion.div>
           </div>
-          <div className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] mx-auto">
+          <motion.div
+            variants={fadeIn('down', 0.6)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{once: false, amount: 0.7}}
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] mx-auto"
+          >
             <img src={image} alt="me" />
-          </div>
+          </motion.div>
 
         </div>
       </div>
